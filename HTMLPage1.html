@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">文字抜きサイト</h1>
+        <p id="header_explain">このサイトは入力した文章から指定の文字を抜き取るサイトです</p>
+    </div>
+    <div class="container">
+        <button class="ExchangeBtn">文字変換サイトに入れ替える。*まだ未実装です。</button>
+        <label>全体の言葉または文章を入力<input type="text" id="phrase" /></label>
+        <button id="increaseButton">消す選択肢を増やす</button>
+        <button id="decreaseButton">消す選択肢を減らす</button>
+        <label>抜き出したい言葉を入力<input type="text" id="movingInput" /></label>
+        <button id="ConfirmButton">決定</button>
+        <p id="result"></p>
+    </div>
+    <script src="Script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+﻿/* =========================
+   全体
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    color: #263238;
+    background: linear-gradient(135deg, #e8f1ff, #f8fbff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+#header_explain {
+    color: #607d8b;
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   メインコンテナ
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(33, 80, 120, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+    /* =========================
+   ラベル
+========================= */
+
+    .container label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #455a64;
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   入力欄
+========================= */
+
+    .container input {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 1rem;
+        color: #263238;
+        background-color: #f8fafc;
+        border: 2px solid #dce6ef;
+        border-radius: 10px;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    }
+
+
+        /* 入力欄をクリックしたとき */
+
+        .container input:focus {
+            background-color: #ffffff;
+            border-color: #42a5f5;
+            box-shadow: 0 0 0 4px rgba(66, 165, 245, 0.15);
+        }
+
+
+/* =========================
+   文字変換ボタン
+========================= */
+.ExchangeBtn {
+    width: 100%;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient( 135deg, #1976d2, #42a5f5 );
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(25, 118, 210, 0.25);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+    margin-bottom: 25px
+    }
+
+.ExchangeBtn:hover {
+    box-shadow: 0 7px 18px rgba(25, 118, 210, 0.35);
+    transform: translateY(-1px);
+}
+
+.ExchangeBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(25, 118, 210, 0.25);
+}
+
+
+/* =========================
+   増減ボタン
+========================= */
+
+#increaseButton,
+#decreaseButton {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+
+/* 増やす */
+
+#increaseButton {
+    color: #1565c0;
+    background-color: #e3f2fd;
+    margin-bottom: 8px;
+}
+
+    #increaseButton:hover {
+        background-color: #bbdefb;
+    }
+
+
+/* 減らす */
+
+#decreaseButton {
+    color: #c62828;
+    background-color: #ffebee;
+    margin-bottom: 20px;
+}
+
+    #decreaseButton:hover {
+        background-color: #ffcdd2;
+    }
+
+
+    /* ボタンを押した瞬間 */
+
+    #increaseButton:active,
+    #decreaseButton:active {
+        transform: scale(0.98);
+    }
+
+
+/* =========================
+   決定ボタン
+========================= */
+
+#ConfirmButton {
+    width: 100%;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient( 135deg, #1976d2, #42a5f5 );
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(25, 118, 210, 0.25);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+    margin-bottom: 25px;
+}
+
+    #ConfirmButton:hover {
+        box-shadow: 0 7px 18px rgba(25, 118, 210, 0.35);
+        transform: translateY(-1px);
+    }
+
+    #ConfirmButton:active {
+        transform: translateY(1px);
+        box-shadow: 0 3px 8px rgba(25, 118, 210, 0.25);
+    }
+
+
+/* =========================
+   結果
+========================= */
+
+#result {
+    min-height: 80px;
+    padding: 18px;
+    background-color: #f5f9fc;
+    border: 2px solid #e3edf5;
+    border-radius: 10px;
+    color: #263238;
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    #title {
+        font-size: 1.8rem;
+    }
+
+    #header_explain {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+}
